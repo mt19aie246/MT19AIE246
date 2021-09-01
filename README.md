@@ -16,7 +16,7 @@ To run this application, first install docker (or docker-compose) and then check
 
 docker-compose up --build
 
-This will download all the required images and start the containers. Once it is started, the application can be accessed by the url http://localhost:8081 or http://<hostname>:8081.
+This will download all the required images and start the containers. Once it is started, the application can be accessed by the url http://localhost:8081 (or http://hostname:8081).
 
 This is done by Jagadeesh P N (jagadeesh.2@iitj.ac.in, Roll No: MT19AIE246).
 
