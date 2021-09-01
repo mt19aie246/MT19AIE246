@@ -5,7 +5,7 @@ There are 3 main components for this application,
 
 First part is to bring up a mongodb as a container, so to do that we define a service inside the docker-compose.yaml file named mongo. This service defines an image that needs to be used, along with the container name and port exposed by mongo.
 
-Second is the main.go file inside api folder which has the logic to accept GET and POST http APIs on the endpoint /scraps. This is added by the gorilla mux rounter which is used to configure routes (http end point path for API). There is also a mongo driver used to connect to the mongo database which is used to save the scrap in the Scraps collection. There are two main methods, 
+Second is the main.go file inside api folder which has the logic to accept GET and POST http APIs on the endpoint /scraps. This is added by the gorilla mux router which is used to configure routes (http end point path for API). There is also a mongo driver used to connect to the mongo database which is used to save the scrap in the Scraps collection. There are two main methods, 
 1. readScrap which reads all scraps present in the database and returns the result.
 2. saveScrap which saves the scrap entered by the user along with the timestamp into the mongo collection.
 To add this as a container, we define another service in docker-compose.yaml named api where we specifcy the port which the application listens, dependency which is the mongo container. The api folder contains a docker file which has steps to bring up the api container itself.
