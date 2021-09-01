@@ -12,6 +12,12 @@ To add this as a container, we define another service in docker-compose.yaml nam
 
 Third part is a webserver which can server html files, Nginx is used for this purpose. An index.html file is created which has the logic to display a text box and invoke the apis exposed by the api container to save and display scraps. This is created under web folder which also has a docker file which specify how to load the nginx as a container and uses the index.html to serve requests. A third service is added to docker-compose.yaml file named web which specifies the nginx image, port and volumes so as to load the index.html. It depends on the api container which is added as a dependency.
 
+To run this application, first install docker (or docker-compose) and then check out the code, navigate to the src directory and run the command
+
+docker-compose up --build
+
+This will download all the required images and start the containers. Once it is started, the application can be accessed by the url http://localhost:8081 or http://<hostname>:8081.
+
 This is done by Jagadeesh P N (jagadeesh.2@iitj.ac.in, Roll No: MT19AIE246).
 
 
